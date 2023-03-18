@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="main">
+            <input type="text" value="" placeholder="Enter First Number">
+            <input type="text" value="" placeholder="Enter Second Number">
+
+            <select name="" id="">
+                <option value="">select</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <button>Submit</button>
+            <p></p>
+        </div>
+    </div>
+    <script>
+        let input1 = document.querySelector("input:first-of-type");
+        let input2 = document.querySelector("input:last-of-type");
+        let btn = document.querySelector("button");
+        let para = document.querySelector("p");
+        let select = document.querySelector("select");
+
+        btn.onclick = () => {
+            switch (select.value) {
+
+                case "+":
+
+                    para.innerHTML = Number(input1.value) + Number(input2.value);
+                    break;
+
+                case "-":
+                    para.innerHTML = Number(input1.value) - Number(input2.value);
+                    break;
+
+                case "*":
+                    para.innerHTML = Number(input1.value) * Number(input2.value);
+                    break;
+
+                case "/":
+                    para.innerHTML = Number(input1.value) / Number(input2.value);
+                    break;
+
+                case "%":
+                    para.innerHTML = Number(input1.value) % Number(input2.value);
+                    break;
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
